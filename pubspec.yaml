@@ -1,0 +1,326 @@
+name: health_gauge
+description: A new Flutter application.
+publish_to: none
+
+
+# https://developer .apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+version: 2.0.12+13  #33 1.6.200+45
+# Version Medium: https://medium.com/karlmax-berlin/versioning-with-flutter-299869e68af4
+
+environment:
+  sdk: ">=2.19.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  #  API libraries
+  dio: ^5.3.2
+  dio_cache_interceptor: ^3.0.0
+  retrofit: ^4.0.1
+  json_annotation: ^4.0.1
+  http: ^0.13.3
+  flutter_animate: ^4.1.0
+
+  # Logging utility
+  logger: ^2.0.2
+
+  # Cache / DB
+
+  shared_preferences: ^2.0.15
+  hive: ^2.0.4
+  hive_flutter: ^1.1.0
+  sqflite: ^2.0.0+3
+  flutter_secure_storage: ^8.1.0
+
+  #background sync
+  #  background_fetch: ^1.1.6
+
+  # Security
+  crypto: ^3.0.0
+  encrypt: ^5.0.0
+  #  sqflite_sqlcipher: ^2.1.1+1
+
+  # Location
+  location: ^4.4.0
+  geolocator: ^10.0.1 # for android
+  #  geolocator: ^7.6.0 # for ios geolocator: ^7.6.0
+  flutter_geocoder: ^0.2.2-nullsafety
+  geocoding: ^2.0.1
+
+  # Page handling
+  page_transition: ^2.0.2
+
+  # Firebase
+  firebase:
+  firebase_crashlytics:
+  firebase_core:
+  firebase_messaging: 14.6.4
+  firebase_dynamic_links:
+  firebase_auth:
+
+  # Image
+  cached_network_image: ^3.1.0
+  flutter_svg: ^2.0.0+1
+
+  # Charts
+  charts_flutter: # ^0.11.0
+    path: customPackage/charts_flutter
+  mp_chart:
+    path: customPackage/mp_chart
+
+
+
+
+
+
+    # git:
+    #   url: https://github.com/TSlamaItemis/MPFlutterChart/
+    #   ref: 165c0ef5fe96d7575663fd4744dd6ca28bb6f88a
+
+  # Animation/Transitions
+  shimmer: ^3.0.0
+  animated_widgets: ^1.1.0
+
+  # Data Handlers
+  provider: ^6.0.0
+  equatable: ^2.0.3
+  flutter_bloc: 7.2.0
+  rxdart: ^0.27.1
+  socket_io_client: ^2.0.0
+  network_info_plus: ^3.0.1
+  package_info_plus:
+
+  # utils
+  path_provider: ^2.0.2
+  intl: ^0.18.0
+  device_info: ^2.0.2
+  permission_handler: ^11.0.0
+  url_launcher: ^6.0.9
+  connectivity_plus: ^4.0.2
+
+  #  flutter_js: ^0.6.0
+  flutter_screenutil: ^5.0.0+2
+  local_assets_server: ^2.0.2+12
+  #  flutter_absolute_path:
+  #    git:
+  #      url: https://github.com/kornperkus/flutter_absolute_path
+  #      reference: 04f639c58b461ea85d6920e1deed5c67231ffd8f
+
+  # PDF
+  advance_pdf_viewer: ^2.0.0
+  flutter_full_pdf_viewer:
+    path: customPackage/flutter_full_pdf_viewer
+  #    git:
+  #      url: https://github.com/figengungor/flutter_full_pdf_viewer
+  #      reference: 97b225aa2698d933015133097f75ded1a7990a9a
+
+  # File handling
+  photo_view: ^0.14.0
+  file_picker: ^5.2.10
+  #  open_file: ^3.2.1
+  #  open_filex: ^3.4.0
+  #  better_open_file: ^3.6.1
+  chewie: ^1.4.0
+  image_picker: ^0.8.5
+
+  webview_flutter: ^4.5.0
+
+
+  # Custom Widgets
+  percent_indicator: ^4.2.3
+  toggle_switch: ^2.1.0
+  emoji_picker_flutter: ^1.0.6
+  flutter_spinkit: ^5.0.0
+  analog_clock: ^0.1.1
+  fluttertoast: ^8.0.8
+  country_code_picker: ^3.0.0
+  country_pickers: ^2.0.0
+  pinput: ^3.0.1
+
+
+  # Clean imports below
+  flutter_local_notifications: ^16.0.0+1
+  flutter_typeahead: ^4.7.0
+  mock_data: ^2.0.0
+
+  flutter_material_color_picker:
+    git:
+      url: https://github.com/Bwolfs2/flutter_material_color_picker
+      reference: 286596b1e0167877bcdb87011bff77364338ba57
+
+  mime: ^1.0.0
+
+  video_player: ^2.6.1
+  #chewie: ^1.2.2
+
+  wakelock: ^0.6.2
+  dotted_line: ^3.0.0
+  signalr_core: ^1.1.1
+  vector_math: ^2.1.0
+  flutter_downloader: 1.10.1
+  image_cropper: ^4.0.1
+  image_downloader:
+    git:
+      url: https://github.com/tHEO2k17/image_downloader.git
+      ref: master
+  auto_size_text: ^3.0.0
+  auto_size_text_field: ^2.2.1
+  scroll_to_index: ^3.0.1
+  flutter_html: ^3.0.0-beta.1
+  visibility_detector: ^0.4.0+2
+  flutter_speed_dial: ^7.0.0
+  speech_to_text: ^6.1.0
+  camera: ^0.10.0+3
+  flutter_tts: 3.2.1
+  open_file_plus: ^3.4.1
+  sentry_flutter: ^7.10.1
+  #  flutter_webview_plugin: ^0.4.0
+  app_settings: ^5.1.1
+  #  heart_bpm: ^1.0.0+0
+  excel: ^2.0.0-null-safety-3
+  google_maps_flutter: ^2.0.6
+  cloud_firestore:
+  #  date_util: ^0.1.4
+  flutter_datetime_picker: ^1.5.1
+  omni_datetime_picker: 0.1.3
+  # logs
+  flutter_logs: ^2.1.4
+  datadog_flutter_plugin: ^1.6.0
+  logging: ^1.0.1
+  flutter_launcher_icons: ^0.13.1
+
+  #  flutter_ttc_ble: ^0.0.9
+  flutter_blue_plus: ^1.17.0
+  #  flutter_webview_plugin:0.
+
+  #  flutter_inappwebview: ^5.7.2+3
+
+  iirjdart:
+    git:
+      url: https://github.com/Supercaly/iirjdart
+      ref: 0532f14066896914af907acc5f892de2378e9fc7
+
+  activity_recognition_flutter: ^4.0.3
+  oscilloscope: ^0.2.0+1
+  syncfusion_flutter_charts: 23.1.36
+  syncfusion_flutter_sliders: 23.1.36
+  syncfusion_flutter_core: 23.1.36
+  # syncfusion_flutter_charts: ^23.1.36
+  # syncfusion_flutter_sliders: ^23.1.36
+  # syncfusion_flutter_charts: ^24.1.45+2
+  # syncfusion_flutter_sliders: ^24.1.45
+  # syncfusion_flutter_core: ^24.1.45
+
+  fl_chart: 0.36.2
+  flutter_nordic_dfu:
+    git:
+      url: https://github.com/fengqiangboy/flutter-nordic-dfu
+      reference: 986bc621f6ea9519c28ae5b9524bd1d105ff40bd
+
+  table_calendar: ^3.0.9
+  flutter_neat_and_clean_calendar: ^0.3.13+28
+  latlong2: ^0.9.0
+  
+  universal_html: ^2.2.4
+  pull_to_refresh: ^2.0.0
+  cancellation_token_http: ^2.0.0
+  dropdown_button2: ^2.3.9
+#  otp_text_field: 1.0.0
+#dependency_overrides:
+#  package_info_plus_windows: 3.0.0
+
+dev_dependencies:
+  test: ^1.20.1
+  flutter_driver:
+    sdk: flutter
+
+  # API/DB dependecies
+  retrofit_generator: ^7.0.8
+  json_serializable: ^6.1.4
+  hive_generator: any
+  build_runner: ^2.1.7
+  flutter_math_fork: ^0.7.1
+  web_socket_channel: ^2.2.0
+  # Clipboard
+  clipboard: ^0.1.3
+  cron: ^0.5.1
+  # input_quantity: ^2.2.0
+
+
+
+  #terra SDK
+  terra_flutter_bridge: ^0.4.8
+
+
+dependency_overrides:
+  package_info_plus_windows: 3.0.0
+  syncfusion_flutter_charts: 23.1.36
+  syncfusion_flutter_sliders: 23.1.36
+  syncfusion_flutter_core: 23.1.36
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter.
+
+flutter_icons:
+  android: true
+  ios: false
+  image_path: "assets/icon/icon.png"
+
+flutter:
+
+  fonts:
+    - family: Nunito
+      fonts:
+        - asset: fonts/Nunito-Regular.ttf
+        - asset: fonts/Nunito-SemiBold.ttf
+        - asset: fonts/Nunito-Bold.ttf
+          weight: 700
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    #   - images/earth.svg
+    #    - assets/
+    - asset/
+    - asset/2.0x/
+    #    - asset/tflite/
+    - asset/3.0x/
+    - asset/Help/
+    - asset/Sport/
+    - asset/Wellness/
+    - asset/HelpImages/
+    - asset/HomeItem/
+    - asset/mapScreenActivity/
+    - asset/help.html
+    - asset/terms_and_condition.html
+    - asset/help_french.html
+    - asset/terms_and_condition_french.html
+    - asset/Defaulttags.json
+    - asset/files/
+    - tfl/
+  #    - asset/PPGFull.xlsx
+
+  # example:
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/custom-fonts/#from-packages

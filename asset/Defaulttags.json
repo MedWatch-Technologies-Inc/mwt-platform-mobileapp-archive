@@ -1,0 +1,32 @@
+{
+    "tags":[
+    {
+    "type":"well-being",
+    "image":"asset/ic_well_being.png"
+    },
+    {
+        "type":"stress",
+        "image":"asset/Stress.png"
+        },
+        {
+            "type":"pain",
+            "image":"asset/ic_pain.png"
+            },
+        {
+            "type":"dizziness",
+            "image":"asset/Dizzy.png"
+            },
+        {
+            "type":"fatigue",
+            "image":"asset/Tired.png"
+            },
+            {
+                "type":"nausea",
+                "image":"asset/nausea.png"
+                },
+                {
+                    "type":"smile",
+                    "image":"asset/smile.png"
+                    }
+    ]
+}

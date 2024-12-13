@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="appLogo.png"/>
+    <meta name="viewport" content="width=device-widht, intial-scale=1.0">
+</head>
+<body>
+<script src="https://cdn.jsdelivr.net/npm/fili"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"></script>
+<script src="dct.js"></script>
+<script>
+            const SIGNAL_LEN = 3048
+            const TARGET_LEN = 1500
+            const Q_THRESHOLD = 4.
+            const STRIDE = 500
+            const WINDOW_LEN = 1500
+            const NUM_ANCHORS = 10
+            const RESCALED_LEN= 500
+
+
+            const filter = Fili.CalcCascades();
+
+            function generateRandomInteger(max) {return Math.floor(Math.random() * max) + 1;}
+
+            async function load_tf_model() {
+            const model =  tf.loadLayersModel('model.json');
+            return model};
+
+            async function load_signal_classifier_model() {
+            const model =  tf.loadLayersModel('model2.json');
+            ;
+            return model};
+
+
+
+
+            async function make_prediction(model,selected_anchor,signal,dems) {
+                const new_prediction = fetch(selected_anchor)
+                .then((response) => response.json())
+                    .then((anchor) => {
+                        const anchor_ppg_ecg = tf.concat([tf.tensor(anchor.ppg).reshape([1,500,1]),tf.tensor(anchor.ecg).reshape([1,500,1])],-1);
+                        const anchor_dems = tf.tensor([anchor.age,anchor.height,anchor.weight,anchor.hr,anchor.gender]).reshape([1,5]);
+                        const anchor_bp = tf.tensor([anchor.sys,anchor.dias])
+                        var output = model.predict([signal,dems,anchor_ppg_ecg,anchor_dems]);
+                        //console.log(anchor_bp.arraySync(),output.arraySync());
+                        const prediction = tf.add(anchor_bp,output);
+                        return prediction})
+                    return new_prediction;
+
+            }
+
+            async function make_ensemble_predictions(model,signal,dems){
+                var selected_anchor = 'anchor_'+generateRandomInteger(2777).toString()+'.json';
+                var running_prediction = await make_prediction(model,selected_anchor,signal,dems);
+
+                for (let i = 1; i <= NUM_ANCHORS; i++){
+                    var selected_anchor = 'anchor_'+generateRandomInteger(2777).toString()+'.json';
+                    var prediction =  await make_prediction(model,selected_anchor,signal,dems);
+                    running_prediction = tf.add(running_prediction,prediction);
+                    console.log(prediction.arraySync());
+
+
+                }
+                var ensemble_prediction = running_prediction.div(tf.scalar(NUM_ANCHORS+1)).arraySync()
+                console.log(ensemble_prediction[0][0]);
+                console.log(ensemble_prediction[0][1]);
+                             Print.postMessage((ensemble_prediction[0][0]).toString().slice(0,3) + "," +(ensemble_prediction[0][1]).toString().slice(0,3));
+
+<!--                alert('Sys Prediction: '+ (ensemble_prediction[0][0]).toString().slice(0,3));-->
+<!--                alert('Dias Prediction: '+ (ensemble_prediction[0][1]).toString().slice(0,3));-->
+
+
+            }
+            async function load_json() {
+                const obj =  fetch('sample.json')
+                .then((response) => response.json())
+                    .then((json) => {return json});
+                return obj
+                }
+
+            var iirCalculator = new Fili.CalcCascades();
+            var high_iirFilterCoeffs  = iirCalculator.highpass({
+                order:2, // cascade 3 biquad filters (max: 12)
+                characteristic: 'butterworth',
+                Fs: 2500, // sampling frequency
+                Fc: 15, // cutoff frequency / center frequency for bandpass, bandstop, peak
+                //BW: 1, // bandwidth only for bandstop and bandpass filters - optional
+                //gain: 0, // gain for peak, lowshelf and highshelf
+                //preGain: true // adds one constant multiplication for highpass and lowpass
+                // k = (1 + cos(omega)) * 0.5 / k = 1 with preGain == false
+                });
+
+            var low_iirFilterCoeffs  = iirCalculator.lowpass({
+                order: 2, // cascade 3 biquad filters (max: 12)
+                characteristic: 'butterworth',
+                Fs: 1000, // sampling frequency
+                Fc: 100, // cutoff frequency / center frequency for bandpass, bandstop, peak
+                //BW: 1, // bandwidth only for bandstop and bandpass filters - optional
+                //gain: 0, // gain for peak, lowshelf and highshelf
+                //preGain: false // adds one constant multiplication for highpass and lowpass
+                // k = (1 + cos(omega)) * 0.5 / k = 1 with preGain == false
+                 });
+
+
+                       // Convert str of numbers to ints for ppgs
+
+
+
+
+
+                       load_tf_model().then((model) =>{
+            load_signal_classifier_model().then((filter_model) => { load_json().then((obj) => {
+
+                const raw_ppg = obj.raw_ppg.map(str => {return Number(str);});
+                var ecg_filtered = obj.raw_ecg.map(str => {return Number(str);});            // Convert str of numbers to ints for ecgs
+
+                var firFilterlow  = new Fili.IirFilter(low_iirFilterCoeffs);
+                var firFilterhigh  = new Fili.IirFilter(high_iirFilterCoeffs);
+
+
+                var filtered_ppg_high = firFilterhigh.simulate(raw_ppg);                    // Run high pass filter
+
+                var ppg_filtered = firFilterlow.simulate(filtered_ppg_high);                // Run low pass filter
+
+
+
+                var array_of_signals = new Array();
+                var array_of_demographics = new Array();
+                var i =0;
+
+
+                while (WINDOW_LEN+STRIDE*i < SIGNAL_LEN){                                   // Slice into windows and scale signals in the range [0,1]
+                    var slice_of_ppg = tf.slice(ppg_filtered,i*STRIDE,WINDOW_LEN);
+                    var slice_of_ecg = tf.slice(ecg_filtered,i*STRIDE,WINDOW_LEN);
+
+
+                    const fcd_transform_ecg = dct([slice_of_ecg.arraySync()]);
+                    const filtered_ecg = idct([fcd_transform_ecg[0].slice(0,RESCALED_LEN)]);
+
+                    const fcd_transform = dct([slice_of_ppg.arraySync()]);
+                    const filtered_ppg = idct([fcd_transform[0].slice(0,RESCALED_LEN)]);
+
+                    const min_in_ppg  = tf.min(filtered_ppg);                        //Scale the ppg from 0-1
+                    const max_in_ppg = tf.max(filtered_ppg);
+
+                    const min_array = tf.onesLike(filtered_ppg).mul(min_in_ppg);
+
+                    const ppg_minus_min_ppg = tf.sub(filtered_ppg,min_array);
+                    const dif_max_and_min_ppg = tf.sub(max_in_ppg,min_in_ppg);
+
+                    const scaled_ppg = ppg_minus_min_ppg.div(dif_max_and_min_ppg);
+
+
+                    const min_in_ecg = tf.min(filtered_ecg);                        //Scale the ppg from 0-1
+                    const max_in_ecg = tf.max(filtered_ecg);
+
+                    const min_array_ecg = tf.onesLike(filtered_ecg).mul(min_in_ecg);
+
+                    const ecg_minus_min = tf.sub(filtered_ecg,min_array_ecg);
+                    const dif_max_and_min_ecg = tf.sub(max_in_ecg,min_in_ppg);
+
+                    const scaled_ecg = ecg_minus_min.div(dif_max_and_min_ecg);
+
+
+                    const signal_ppg_ecg = tf.concat([scaled_ppg.reshape([1,500,1]),scaled_ppg.reshape([1,500,1])],-1);
+
+                    var quality_filter = filter_model.predict(signal_ppg_ecg);
+
+                    if (quality_filter.arraySync()<.5){
+                    console.log(quality_filter.arraySync());
+                    const signal_dems = tf.tensor([obj.age,obj.height,obj.weight,obj.hr,obj.gender]);
+                    array_of_signals.push(signal_ppg_ecg);
+                    array_of_demographics.push(signal_dems.reshape([1,-1]));
+
+                    //console.log(scaled_ppg.arraySync());
+                    }
+                    i++;
+                }
+
+                    var selected_anchor = 'anchor_'+generateRandomInteger(2777).toString()+'.json';
+                    make_ensemble_predictions(model,array_of_signals[0],array_of_demographics[0])
+
+
+
+
+
+
+
+
+
+
+
+
+
+            });
+                });});
+
+
+
+
+
+        </script>
+</body>
+</html>

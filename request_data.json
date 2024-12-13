@@ -1,0 +1,14 @@
+{
+  "UserID": 16568,
+  "ImageName": "https://storage.googleapis.com/healthgauge/Images/TagLabel/2285/3d7b598e-e438-4777-b0a8-1f9bd2be18c6.jpeg?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=healthgaugestorage-sa%40healthgaugeinc.iam.gserviceaccount.com%2F20240110%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20240110T112546Z&X-Goog-Expires=1800&X-Goog-SignedHeaders=host&X-Goog-Signature=2990ef9c7239156f32f23ede212f0d9a1c9680ad5e967602c52f2fcad9360bdb9acb201f65243620930362cbb0936aeba1df30d062a0c129ddfc970c65772fa2c55ef35638072f5663d151a47b5d4c1ff60caaf55105f964bc2de3345df8b2f501b620360ff266a39ce2a337f69bfcda06b3c68bc1355bd6ce805bf01f7d6909288f9c1fa8634633f6be3676b714d9503c3ff4bae4e59100e9d63ab1f4117474198b1ec3629cd06b79127bf14b4a9527d140a09aae93839a8b620c7f529afc9bc72a6d72724576f6abc3f1af88f29343d42492e4497b6e44dfdb4ac211542d6f17c873513a5fc423843e17310655c72423313ed4cd98e6f3bd92b916fc2cad7d",
+  "UnitName": "Number",
+  "LabelName": "Running",
+  "MinRange": 1.0,
+  "MaxRange": 10.0,
+  "DefaultValue": 4.0,
+  "PrecisionDigit": 1.0,
+  "FKTagLabelTypeID": 3,
+  "IsAutoLoad": false,
+  "CreatedDateTimeStamp": 1704889290337,
+  "Short_description": "Running Session"
+}
