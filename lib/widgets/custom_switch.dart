@@ -636,7 +636,7 @@ class _MaterialSwitchState extends State<_MaterialSwitch> with TickerProviderSta
         return isDark ? Colors.grey.shade800 : Colors.grey.shade400;
       }
       if (states.contains(MaterialState.selected)) {
-        return theme.toggleableActiveColor;
+        return theme.toggleButtonsTheme.focusColor??theme.primaryColor;
       }
       return isDark ? Colors.grey.shade400 : Colors.grey.shade50;
     });

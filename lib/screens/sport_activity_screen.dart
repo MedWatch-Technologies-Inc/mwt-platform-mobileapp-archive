@@ -536,36 +536,36 @@ class _SportActivityScreenState extends State<SportActivityScreen> {
       if (stepController.xAxis != null &&
           stepController.xAxis.textColor != null) {
         stepController.xAxis.textColor =
-            Theme.of(context).textTheme.bodyText1!.color;
+            Theme.of(context).textTheme.bodyLarge!.color;
       }
       if (stepController.axisLeft != null &&
           stepController.axisLeft.textColor != null) {
         stepController.axisLeft.textColor =
-            Theme.of(context).textTheme.bodyText1!.color;
+            Theme.of(context).textTheme.bodyLarge!.color;
       }
     }
     if (caloriesController != null) {
       if (caloriesController.xAxis != null &&
           caloriesController.xAxis.textColor != null) {
         caloriesController.xAxis.textColor =
-            Theme.of(context).textTheme.bodyText1!.color;
+            Theme.of(context).textTheme.bodyLarge!.color;
       }
       if (caloriesController.axisLeft != null &&
           caloriesController.axisLeft.textColor != null) {
         caloriesController.axisLeft.textColor =
-            Theme.of(context).textTheme.bodyText1!.color;
+            Theme.of(context).textTheme.bodyLarge!.color;
       }
     }
     if (distanceController != null) {
       if (distanceController.xAxis != null &&
           distanceController.xAxis.textColor != null) {
         distanceController.xAxis.textColor =
-            Theme.of(context).textTheme.bodyText1!.color;
+            Theme.of(context).textTheme.bodyLarge!.color;
       }
       if (distanceController.axisLeft != null &&
           distanceController.axisLeft.textColor != null) {
         distanceController.axisLeft.textColor =
-            Theme.of(context).textTheme.bodyText1!.color;
+            Theme.of(context).textTheme.bodyLarge!.color;
       }
     }
   }
@@ -948,7 +948,7 @@ class _SportActivityScreenState extends State<SportActivityScreen> {
     stepsGraphControllerWeek = LineChartController(
       axisLeftSettingFunction: (axisLeft, controller) {
         axisLeft
-          ..textColor = Theme.of(context).textTheme.bodyText1!.color!
+          ..textColor = Theme.of(context).textTheme.bodyLarge!.color!
           ..axisValueFormatter = YValueFormatter(stepsGraphControllerWeek)
           ..setLabelCount2(5, true)
 //          ..setAxisMaxValue(500)
@@ -959,7 +959,7 @@ class _SportActivityScreenState extends State<SportActivityScreen> {
       },
       xAxisSettingFunction: (xAxis, controller) {
         xAxis
-          ..textColor = Theme.of(context).textTheme.bodyText1!.color!
+          ..textColor = Theme.of(context).textTheme.bodyLarge!.color!
           ..position = (XAxisPosition.BOTTOM)
           ..drawGridLines = (false)
           ..setLabelCount2(7, true)
@@ -981,7 +981,7 @@ class _SportActivityScreenState extends State<SportActivityScreen> {
     caloriesGraphControllerWeek = LineChartController(
       axisLeftSettingFunction: (axisLeft, controller) {
         axisLeft
-          ..textColor = Theme.of(context).textTheme.bodyText1!.color!
+          ..textColor = Theme.of(context).textTheme.bodyLarge!.color!
           ..axisValueFormatter = YValueFormatter(stepsGraphControllerWeek)
           ..setLabelCount2(5, true)
 //          ..setAxisMaxValue(500)
@@ -992,7 +992,7 @@ class _SportActivityScreenState extends State<SportActivityScreen> {
       },
       xAxisSettingFunction: (xAxis, controller) {
         xAxis
-          ..textColor = Theme.of(context).textTheme.bodyText1!.color!
+          ..textColor = Theme.of(context).textTheme.bodyLarge!.color!
           ..position = (XAxisPosition.BOTTOM)
           ..drawGridLines = (false)
           ..setLabelCount2(7, true)
@@ -1014,7 +1014,7 @@ class _SportActivityScreenState extends State<SportActivityScreen> {
     mileGraphControllerWeek = LineChartController(
       axisLeftSettingFunction: (axisLeft, controller) {
         axisLeft
-          ..textColor = Theme.of(context).textTheme.bodyText1!.color!
+          ..textColor = Theme.of(context).textTheme.bodyLarge!.color!
           ..axisValueFormatter = YValueFormatter(stepsGraphControllerWeek,
               unit: distanceUnit, isDistance: true)
           ..setLabelCount2(5, true)
@@ -1026,7 +1026,7 @@ class _SportActivityScreenState extends State<SportActivityScreen> {
       },
       xAxisSettingFunction: (xAxis, controller) {
         xAxis
-          ..textColor = Theme.of(context).textTheme.bodyText1!.color!
+          ..textColor = Theme.of(context).textTheme.bodyLarge!.color!
           ..position = (XAxisPosition.BOTTOM)
           ..drawGridLines = (false)
           ..setLabelCount2(7, true)
@@ -1049,7 +1049,7 @@ class _SportActivityScreenState extends State<SportActivityScreen> {
 //    stepsGraphControllerMonth = LineChartController(
 //      axisLeftSettingFunction: (axisLeft, controller) {
 //        axisLeft
-//          ..textColor = Theme.of(context).textTheme.bodyText1.color
+//          ..textColor = Theme.of(context).textTheme.bodyLarge.color
 //          ..setLabelCount2(5, true)
 //          ..axisValueFormatter = YValueFormatter(stepsGraphControllerMonth)
 //          //..setAxisMaxValue(500)
@@ -1081,7 +1081,7 @@ class _SportActivityScreenState extends State<SportActivityScreen> {
 //    caloriesGraphControllerMonth = LineChartController(
 //      axisLeftSettingFunction: (axisLeft, controller) {
 //        axisLeft
-//          ..textColor = Theme.of(context).textTheme.bodyText1.color
+//          ..textColor = Theme.of(context).textTheme.bodyLarge.color
 //          ..setLabelCount2(5, true)
 //          ..axisValueFormatter = YValueFormatter(caloriesGraphControllerMonth)
 //          //..setAxisMaxValue(500)
@@ -1092,7 +1092,7 @@ class _SportActivityScreenState extends State<SportActivityScreen> {
 //      },
 //      xAxisSettingFunction: (xAxis, controller) {
 //        xAxis
-//          ..textColor = Theme.of(context).textTheme.bodyText1.color
+//          ..textColor = Theme.of(context).textTheme.bodyLarge.color
 //          ..position = (XAxisPosition.BOTTOM)
 //          ..drawGridLines = (false)
 //          ..setLabelCount2(31, true)
@@ -1115,7 +1115,7 @@ class _SportActivityScreenState extends State<SportActivityScreen> {
 //    mileGraphControllerMonth = LineChartController(
 //      axisLeftSettingFunction: (axisLeft, controller) {
 //        axisLeft
-//          ..textColor = Theme.of(context).textTheme.bodyText1.color
+//          ..textColor = Theme.of(context).textTheme.bodyLarge.color
 //          ..setLabelCount2(5, true)
 //          ..axisValueFormatter = YValueFormatter(mileGraphControllerMonth)
 //          //..setAxisMaxValue(500)
@@ -1126,7 +1126,7 @@ class _SportActivityScreenState extends State<SportActivityScreen> {
 //      },
 //      xAxisSettingFunction: (xAxis, controller) {
 //        xAxis
-//          ..textColor = Theme.of(context).textTheme.bodyText1.color
+//          ..textColor = Theme.of(context).textTheme.bodyLarge.color
 //          ..position = (XAxisPosition.BOTTOM)
 //          ..drawGridLines = (false)
 //          ..setLabelCount2(31, true)
@@ -1419,7 +1419,7 @@ class _SportActivityScreenState extends State<SportActivityScreen> {
       stepsGraphControllerMonth = LineChartController(
         axisLeftSettingFunction: (axisLeft, controller) {
           axisLeft
-            ..textColor = Theme.of(context).textTheme.bodyText1!.color!
+            ..textColor = Theme.of(context).textTheme.bodyLarge!.color!
             ..setLabelCount2(5, true)
             ..axisValueFormatter = YValueFormatter(stepsGraphControllerMonth)
             //          //..setAxisMaxValue(500)
@@ -1430,7 +1430,7 @@ class _SportActivityScreenState extends State<SportActivityScreen> {
         },
         xAxisSettingFunction: (xAxis, controller) {
           xAxis
-            ..textColor = Theme.of(context).textTheme.bodyText1!.color!
+            ..textColor = Theme.of(context).textTheme.bodyLarge!.color!
             ..position = (XAxisPosition.BOTTOM)
             ..drawGridLines = (false)
             ..setLabelCount2(xAxisCount, true)
@@ -1453,7 +1453,7 @@ class _SportActivityScreenState extends State<SportActivityScreen> {
       caloriesGraphControllerMonth = LineChartController(
         axisLeftSettingFunction: (axisLeft, controller) {
           axisLeft
-            ..textColor = Theme.of(context).textTheme.bodyText1!.color!
+            ..textColor = Theme.of(context).textTheme.bodyLarge!.color!
             ..setLabelCount2(5, true)
             ..axisValueFormatter = YValueFormatter(caloriesGraphControllerMonth)
             //..setAxisMaxValue(500)
@@ -1464,7 +1464,7 @@ class _SportActivityScreenState extends State<SportActivityScreen> {
         },
         xAxisSettingFunction: (xAxis, controller) {
           xAxis
-            ..textColor = Theme.of(context).textTheme.bodyText1!.color!
+            ..textColor = Theme.of(context).textTheme.bodyLarge!.color!
             ..position = (XAxisPosition.BOTTOM)
             ..drawGridLines = (false)
             ..setLabelCount2(xAxisCount, true)
@@ -1487,7 +1487,7 @@ class _SportActivityScreenState extends State<SportActivityScreen> {
       mileGraphControllerMonth = LineChartController(
         axisLeftSettingFunction: (axisLeft, controller) {
           axisLeft
-            ..textColor = Theme.of(context).textTheme.bodyText1!.color!
+            ..textColor = Theme.of(context).textTheme.bodyLarge!.color!
             ..setLabelCount2(5, true)
             ..axisValueFormatter = YValueFormatter(mileGraphControllerMonth,
                 unit: distanceUnit, isDistance: true)
@@ -1499,7 +1499,7 @@ class _SportActivityScreenState extends State<SportActivityScreen> {
         },
         xAxisSettingFunction: (xAxis, controller) {
           xAxis
-            ..textColor = Theme.of(context).textTheme.bodyText1!.color!
+            ..textColor = Theme.of(context).textTheme.bodyLarge!.color!
             ..position = (XAxisPosition.BOTTOM)
             ..drawGridLines = (false)
             ..setLabelCount2(xAxisCount, true)
@@ -1734,7 +1734,7 @@ class YValueFormatter extends ValueFormatter {
   int? _unit = 0;
 
   YValueFormatter(BarLineScatterCandleBubbleController? controller,
-      {unit: 0, isDistance = false}) {
+      {unit = 0, isDistance = false}) {
     this._controller = controller!;
     this._isDistance = isDistance;
     this._unit = unit;

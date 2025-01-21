@@ -82,7 +82,7 @@ class BPErrorGraph extends StatelessWidget {
                     title: AxisTitle(
                       text: 'HOUR',
                       textStyle: TextStyle(
-                          color: Theme.of(context).textTheme.bodyText1!.color, fontSize: 10),
+                          color: Theme.of(context).textTheme.bodyLarge!.color, fontSize: 10),
                     ),
                     decimalPlaces: 0,
                     minimum: 0,
@@ -116,7 +116,7 @@ class BPErrorGraph extends StatelessWidget {
                     title: AxisTitle(
                         text: 'AI PRECISION PULSE READING',
                         textStyle: TextStyle(
-                            color: Theme.of(context).textTheme.bodyText1!.color, fontSize: 10)),
+                            color: Theme.of(context).textTheme.bodyLarge!.color, fontSize: 10)),
                     minimum: 50,
                     maximum: 200,
                     decimalPlaces: 0,

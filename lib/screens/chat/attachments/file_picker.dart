@@ -5,7 +5,6 @@ import 'package:file_picker/file_picker.dart';
 import 'package:health_gauge/value/app_color.dart';
 import 'package:open_file_plus/open_file_plus.dart';
 import 'package:video_player/video_player.dart';
-import 'package:advance_pdf_viewer/advance_pdf_viewer.dart';
 //import 'package:pdf_previewer/pdf_previewer.dart';
 
 class FilePickerPage extends StatefulWidget {

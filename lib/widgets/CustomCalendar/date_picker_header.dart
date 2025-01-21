@@ -111,7 +111,7 @@ class CustomDatePickerHeader extends StatelessWidget {
     final Color primarySurfaceColor = isDark ? colorScheme.surface : colorScheme.primary;
     final Color onPrimarySurfaceColor = isDark ? colorScheme.onSurface : colorScheme.onPrimary;
 
-    final TextStyle? helpStyle = textTheme.overline?.copyWith(
+    final TextStyle? helpStyle = textTheme.labelSmall?.copyWith(
       color: isDark ?  Color(0xffffffff).withOpacity(0.87) : Color(0xff384341),
       fontSize: 10.sp,
     );

@@ -171,9 +171,9 @@ class _BPHistoryHomeState extends State<HRHistoryHome> with SingleTickerProvider
                                                   fontSize1: value.isNotEmpty ? 30.sp : 15.sp,
                                                   fontSize2: 15.sp,
                                                   color1:
-                                                      Theme.of(context).textTheme.bodyText1!.color,
+                                                      Theme.of(context).textTheme.bodyLarge!.color,
                                                   color2:
-                                                      Theme.of(context).textTheme.bodyText1!.color,
+                                                      Theme.of(context).textTheme.bodyLarge!.color,
                                                 ),
                                               ],
                                             ),
@@ -222,9 +222,9 @@ class _BPHistoryHomeState extends State<HRHistoryHome> with SingleTickerProvider
                                                   fontSize1: value.isNotEmpty ? 30.sp : 15.sp,
                                                   fontSize2: 15.sp,
                                                   color1:
-                                                      Theme.of(context).textTheme.bodyText1!.color,
+                                                      Theme.of(context).textTheme.bodyLarge!.color,
                                                   color2:
-                                                      Theme.of(context).textTheme.bodyText1!.color,
+                                                      Theme.of(context).textTheme.bodyLarge!.color,
                                                 ),
                                               ],
                                             ),
@@ -274,11 +274,11 @@ class _BPHistoryHomeState extends State<HRHistoryHome> with SingleTickerProvider
                                                       fontSize2: 15.sp,
                                                       color1: Theme.of(context)
                                                           .textTheme
-                                                          .bodyText1!
+                                                          .bodyLarge!
                                                           .color,
                                                       color2: Theme.of(context)
                                                           .textTheme
-                                                          .bodyText1!
+                                                          .bodyLarge!
                                                           .color,
                                                     ),
                                                   ],

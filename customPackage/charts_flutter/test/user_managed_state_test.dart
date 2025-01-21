@@ -15,6 +15,8 @@
 
 import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:matcher/expect.dart' as exp;
+
 
 import 'package:charts_flutter/flutter.dart' as charts;
 
@@ -41,21 +43,20 @@ void main() {
         child: testChart,
       ),
     );
-
-    expect(currentSelectionModel, isNull);
+    expect(currentSelectionModel, exp.isNull);
 
     await tester.tap(find.byType(charts.BarChart));
 
     await tester.pump();
 
-    expect(currentSelectionModel, isNotNull);
-    expect(currentSelectionModel!.selectedDatum, hasLength(1));
+    expect(currentSelectionModel, exp.isNotNull);
+    expect(currentSelectionModel!.selectedDatum, exp.hasLength(1));
     final selectedDatum =
         currentSelectionModel!.selectedDatum.first.datum as OrdinalSales;
-    expect(selectedDatum.year, equals('2016'));
-    expect(selectedDatum.sales, equals(100));
-    expect(currentSelectionModel!.selectedSeries, hasLength(1));
-    expect(currentSelectionModel!.selectedSeries.first.id, equals('Sales'));
+    expect(selectedDatum.year, exp.equals('2016'));
+    expect(selectedDatum.sales, exp.equals(100));
+    expect(currentSelectionModel!.selectedSeries, exp.hasLength(1));
+    expect(currentSelectionModel!.selectedSeries.first.id, exp.equals('Sales'));
   });
 }
 

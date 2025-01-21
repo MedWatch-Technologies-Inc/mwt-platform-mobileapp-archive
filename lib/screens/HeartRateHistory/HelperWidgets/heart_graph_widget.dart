@@ -59,7 +59,7 @@ class HeartGraphWidget extends StatelessWidget {
                 title: AxisTitle(
                   text: 'HOUR',
                   textStyle: TextStyle(
-                      color: Theme.of(context).textTheme.bodyText1!.color,
+                      color: Theme.of(context).textTheme.bodyLarge!.color,
                       fontSize: 10),
                 ),
                 decimalPlaces: 0,
@@ -81,7 +81,7 @@ class HeartGraphWidget extends StatelessWidget {
                 title: AxisTitle(
                     text: 'HEART RATE',
                     textStyle: TextStyle(
-                        color: Theme.of(context).textTheme.bodyText1!.color,
+                        color: Theme.of(context).textTheme.bodyLarge!.color,
                         fontSize: 10)),
                 minimum: 0,
                 axisLine: AxisLine(

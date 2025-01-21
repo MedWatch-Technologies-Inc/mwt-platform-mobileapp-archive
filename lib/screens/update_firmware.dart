@@ -26,7 +26,7 @@ class UpdateFirmware extends StatefulWidget {
   UpdateFirmwareState createState() => UpdateFirmwareState();
 }
 
-class UpdateFirmwareState extends State<UpdateFirmware> with ScanDeviceListener{
+class UpdateFirmwareState extends State<UpdateFirmware> implements ScanDeviceListener{
   bool dfuRunning = false;
   DeviceModel? deviceModel;
   bool hasStarted = false;

@@ -124,7 +124,7 @@ class _SnackbarOverlayState extends State<SnackbarOverlay> {
     return Expanded(
       child: AutoSizeText(widget.message,
           maxLines: 2,
-          style: Theme.of(context).textTheme.bodyText1!.copyWith(
+          style: Theme.of(context).textTheme.bodyLarge!.copyWith(
                 color: textColor,
               )),
     );

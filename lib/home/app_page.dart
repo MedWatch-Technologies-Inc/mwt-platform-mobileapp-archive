@@ -1,5 +1,4 @@
 import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
@@ -73,20 +72,23 @@ class _AppPageState extends State<AppPage> with WidgetsBindingObserver {
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
     super.didChangeAppLifecycleState(state);
-    switch (state) {
-      case AppLifecycleState.resumed:
-        // TODO: Handle this case. foreground
-        break;
-      case AppLifecycleState.inactive:
-        // TODO: Handle this case. background
-        break;
-      case AppLifecycleState.paused:
-        // TODO: Handle this case. background
-        break;
-      case AppLifecycleState.detached:
-        // TODO: Handle this case. ??
-        break;
-    }
+    // switch (state) {
+    //   case AppLifecycleState.resumed:
+    //     // TODO: Handle this case. foreground
+    //     break;
+    //   case AppLifecycleState.inactive:
+    //     // TODO: Handle this case. background
+    //     break;
+    //   case AppLifecycleState.paused:
+    //     // TODO: Handle this case. background
+    //     break;
+    //   case AppLifecycleState.detached:
+    //     // TODO: Handle this case. ??
+    //     break;
+    //   case AppLifecycleState.detached:fl
+    //   // TODO: Handle this case. App is hidden (e.g., on a different screen)
+    //     break;
+    // }
   }
 
   Future<bool> onWillPop() {
@@ -143,7 +145,7 @@ class _BodyBackground extends StatelessWidget {
         }
         return AnimatedContainer(
           duration: Duration(milliseconds: 250),
-          color: themeState.themeData.backgroundColor,
+          color: themeState.themeData.colorScheme.background,
         );
       },
     );

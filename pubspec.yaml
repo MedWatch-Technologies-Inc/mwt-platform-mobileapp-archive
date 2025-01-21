@@ -8,7 +8,7 @@ version: 2.0.12+13  #33 1.6.200+45
 # Version Medium: https://medium.com/karlmax-berlin/versioning-with-flutter-299869e68af4
 
 environment:
-  sdk: ">=2.19.0 <3.0.0"
+  sdk: ">=3.0.0 <4.0.0"
 
 dependencies:
   flutter:
@@ -110,9 +110,9 @@ dependencies:
   #      reference: 04f639c58b461ea85d6920e1deed5c67231ffd8f
 
   # PDF
-  advance_pdf_viewer: ^2.0.0
-  flutter_full_pdf_viewer:
-    path: customPackage/flutter_full_pdf_viewer
+  advance_pdf_viewer2: ^2.0.5+1
+#  flutter_full_pdf_viewer:
+#    path: customPackage/flutter_full_pdf_viewer
   #    git:
   #      url: https://github.com/figengungor/flutter_full_pdf_viewer
   #      reference: 97b225aa2698d933015133097f75ded1a7990a9a
@@ -174,7 +174,7 @@ dependencies:
   flutter_speed_dial: ^7.0.0
   speech_to_text: ^6.1.0
   camera: ^0.10.0+3
-  flutter_tts: 3.2.1
+  flutter_tts: ^4.0.1
   open_file_plus: ^3.4.1
   sentry_flutter: ^7.10.1
   #  flutter_webview_plugin: ^0.4.0
@@ -203,7 +203,7 @@ dependencies:
       url: https://github.com/Supercaly/iirjdart
       ref: 0532f14066896914af907acc5f892de2378e9fc7
 
-  activity_recognition_flutter: ^4.0.3
+  activity_recognition_flutter: ^5.0.0
   oscilloscope: ^0.2.0+1
   syncfusion_flutter_charts: 23.1.36
   syncfusion_flutter_sliders: 23.1.36
@@ -234,8 +234,6 @@ dependencies:
 
 dev_dependencies:
   test: ^1.20.1
-  flutter_driver:
-    sdk: flutter
 
   # API/DB dependecies
   retrofit_generator: ^7.0.8
@@ -260,6 +258,10 @@ dependency_overrides:
   syncfusion_flutter_charts: 23.1.36
   syncfusion_flutter_sliders: 23.1.36
   syncfusion_flutter_core: 23.1.36
+  meta: 1.9.1
+  intl: 0.19.0
+  collection: 1.17.0
+  async: 2.11.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

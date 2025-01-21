@@ -93,7 +93,7 @@ class _BPAreaGraphState extends State<BPAreaGraph> {
                   title: AxisTitle(
                       text: 'DIASTOLIC READING',
                       textStyle: TextStyle(
-                          color: Theme.of(context).textTheme.bodyText1!.color, fontSize: 10)),
+                          color: Theme.of(context).textTheme.bodyLarge!.color, fontSize: 10)),
                   decimalPlaces: 0,
                   minimum: 40,
                   maximum: 120,
@@ -131,7 +131,7 @@ class _BPAreaGraphState extends State<BPAreaGraph> {
                   title: AxisTitle(
                       text: 'SYSTOLIC READING',
                       textStyle: TextStyle(
-                          color: Theme.of(context).textTheme.bodyText1!.color, fontSize: 10)),
+                          color: Theme.of(context).textTheme.bodyLarge!.color, fontSize: 10)),
                   minimum: 40,
                   maximum: 180,
                   decimalPlaces: 0,

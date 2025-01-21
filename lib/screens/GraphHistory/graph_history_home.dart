@@ -244,11 +244,11 @@ class GraphHistoryHomeState extends State<GraphHistoryHome> with SingleTickerPro
                                                         fontSize2: 12.sp,
                                                         color1: Theme.of(context)
                                                             .textTheme
-                                                            .bodyText1!
+                                                            .bodyLarge!
                                                             .color,
                                                         color2: Theme.of(context)
                                                             .textTheme
-                                                            .bodyText1!
+                                                            .bodyLarge!
                                                             .color,
                                                       ),
                                                     ],
@@ -302,11 +302,11 @@ class GraphHistoryHomeState extends State<GraphHistoryHome> with SingleTickerPro
                                                         fontSize2: 12.sp,
                                                         color1: Theme.of(context)
                                                             .textTheme
-                                                            .bodyText1!
+                                                            .bodyLarge!
                                                             .color,
                                                         color2: Theme.of(context)
                                                             .textTheme
-                                                            .bodyText1!
+                                                            .bodyLarge!
                                                             .color,
                                                       ),
                                                     ],
@@ -361,11 +361,11 @@ class GraphHistoryHomeState extends State<GraphHistoryHome> with SingleTickerPro
                                                             fontSize2: 12.sp,
                                                             color1: Theme.of(context)
                                                                 .textTheme
-                                                                .bodyText1!
+                                                                .bodyLarge!
                                                                 .color,
                                                             color2: Theme.of(context)
                                                                 .textTheme
-                                                                .bodyText1!
+                                                                .bodyLarge!
                                                                 .color,
                                                           ),
                                                         ],
@@ -471,11 +471,11 @@ class GraphHistoryHomeState extends State<GraphHistoryHome> with SingleTickerPro
                                                         fontSize2: 12.sp,
                                                         color1: Theme.of(context)
                                                             .textTheme
-                                                            .bodyText1!
+                                                            .bodyLarge!
                                                             .color,
                                                         color2: Theme.of(context)
                                                             .textTheme
-                                                            .bodyText1!
+                                                            .bodyLarge!
                                                             .color,
                                                       ),
                                                     ],
@@ -621,11 +621,11 @@ class GraphHistoryHomeState extends State<GraphHistoryHome> with SingleTickerPro
                                                         fontSize2: 12.sp,
                                                         color1: Theme.of(context)
                                                             .textTheme
-                                                            .bodyText1!
+                                                            .bodyLarge!
                                                             .color,
                                                         color2: Theme.of(context)
                                                             .textTheme
-                                                            .bodyText1!
+                                                            .bodyLarge!
                                                             .color,
                                                       ),
                                                     ],
@@ -679,11 +679,11 @@ class GraphHistoryHomeState extends State<GraphHistoryHome> with SingleTickerPro
                                                         fontSize2: 12.sp,
                                                         color1: Theme.of(context)
                                                             .textTheme
-                                                            .bodyText1!
+                                                            .bodyLarge!
                                                             .color,
                                                         color2: Theme.of(context)
                                                             .textTheme
-                                                            .bodyText1!
+                                                            .bodyLarge!
                                                             .color,
                                                       ),
                                                     ],
@@ -731,11 +731,11 @@ class GraphHistoryHomeState extends State<GraphHistoryHome> with SingleTickerPro
                                                 fontSize2: 12.sp,
                                                 color1: Theme.of(context)
                                                     .textTheme
-                                                    .bodyText1!
+                                                    .bodyLarge!
                                                     .color,
                                                 color2: Theme.of(context)
                                                     .textTheme
-                                                    .bodyText1!
+                                                    .bodyLarge!
                                                     .color,
                                               ),
                                             ],
@@ -854,11 +854,11 @@ class GraphHistoryHomeState extends State<GraphHistoryHome> with SingleTickerPro
                                                         fontSize2: 12.sp,
                                                         color1: Theme.of(context)
                                                             .textTheme
-                                                            .bodyText1!
+                                                            .bodyLarge!
                                                             .color,
                                                         color2: Theme.of(context)
                                                             .textTheme
-                                                            .bodyText1!
+                                                            .bodyLarge!
                                                             .color,
                                                       ),
                                                     ],
@@ -1021,11 +1021,11 @@ class GraphHistoryHomeState extends State<GraphHistoryHome> with SingleTickerPro
                                                         fontSize2: 12.sp,
                                                         color1: Theme.of(context)
                                                             .textTheme
-                                                            .bodyText1!
+                                                            .bodyLarge!
                                                             .color,
                                                         color2: Theme.of(context)
                                                             .textTheme
-                                                            .bodyText1!
+                                                            .bodyLarge!
                                                             .color,
                                                       ),
                                                     ],
@@ -1079,11 +1079,11 @@ class GraphHistoryHomeState extends State<GraphHistoryHome> with SingleTickerPro
                                                         fontSize2: 12.sp,
                                                         color1: Theme.of(context)
                                                             .textTheme
-                                                            .bodyText1!
+                                                            .bodyLarge!
                                                             .color,
                                                         color2: Theme.of(context)
                                                             .textTheme
-                                                            .bodyText1!
+                                                            .bodyLarge!
                                                             .color,
                                                       ),
                                                     ],
@@ -1131,11 +1131,11 @@ class GraphHistoryHomeState extends State<GraphHistoryHome> with SingleTickerPro
                                                         fontSize2: 12.sp,
                                                         color1: Theme.of(context)
                                                             .textTheme
-                                                            .bodyText1!
+                                                            .bodyLarge!
                                                             .color,
                                                         color2: Theme.of(context)
                                                             .textTheme
-                                                            .bodyText1!
+                                                            .bodyLarge!
                                                             .color,
                                                       ),
                                                     ],
@@ -1254,11 +1254,11 @@ class GraphHistoryHomeState extends State<GraphHistoryHome> with SingleTickerPro
                                                         fontSize2: 12.sp,
                                                         color1: Theme.of(context)
                                                             .textTheme
-                                                            .bodyText1!
+                                                            .bodyLarge!
                                                             .color,
                                                         color2: Theme.of(context)
                                                             .textTheme
-                                                            .bodyText1!
+                                                            .bodyLarge!
                                                             .color,
                                                       ),
                                                     ],

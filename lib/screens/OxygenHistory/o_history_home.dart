@@ -179,9 +179,9 @@ class _OHistoryHomeState extends State<OHistoryHome> with SingleTickerProviderSt
                                                   fontSize1: value.isNotEmpty ? 30.sp : 15.sp,
                                                   fontSize2: 15.sp,
                                                   color1:
-                                                      Theme.of(context).textTheme.bodyText1!.color,
+                                                      Theme.of(context).textTheme.bodyLarge!.color,
                                                   color2:
-                                                      Theme.of(context).textTheme.bodyText1!.color,
+                                                      Theme.of(context).textTheme.bodyLarge!.color,
                                                 ),
                                               ],
                                             ),

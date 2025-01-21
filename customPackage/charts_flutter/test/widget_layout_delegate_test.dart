@@ -21,6 +21,7 @@ import 'package:charts_common/common.dart' as common
     show BehaviorPosition, InsideJustification, OutsideJustification;
 import 'package:charts_flutter/src/behaviors/chart_behavior.dart';
 import 'package:charts_flutter/src/widget_layout_delegate.dart';
+import 'package:matcher/expect.dart' as exp;
 
 const chartContainerLayoutID = 'chartContainer';
 
@@ -92,15 +93,15 @@ void main() {
     void verifyResults(WidgetTester tester, Size expectedChartSize,
         Offset expectedChartOffset, Offset expectedBehaviorOffset) {
       final RenderBox chartBox = tester.firstRenderObject(find.byKey(chartKey));
-      expect(chartBox.size, equals(expectedChartSize));
+      expect(chartBox.size, exp.equals(expectedChartSize));
 
       final chartOffset = chartBox.localToGlobal(Offset.zero);
-      expect(chartOffset, equals(expectedChartOffset));
+      expect(chartOffset, exp.equals(expectedChartOffset));
 
       final RenderBox behaviorBox =
           tester.firstRenderObject(find.byKey(behaviorKey));
       final behaviorOffset = behaviorBox.localToGlobal(Offset.zero);
-      expect(behaviorOffset, equals(expectedBehaviorOffset));
+      expect(behaviorOffset, exp.equals(expectedBehaviorOffset));
     }
 
     testWidgets('Position top - start draw area justified',

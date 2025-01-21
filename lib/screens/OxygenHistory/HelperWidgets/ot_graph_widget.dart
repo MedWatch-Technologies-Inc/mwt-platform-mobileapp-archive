@@ -41,7 +41,7 @@ class OTGraphWidget extends StatelessWidget {
         primaryXAxis: NumericAxis(
           title: AxisTitle(
             text: 'HOUR',
-            textStyle: TextStyle(color: Theme.of(context).textTheme.bodyText1!.color, fontSize: 10),
+            textStyle: TextStyle(color: Theme.of(context).textTheme.bodyLarge!.color, fontSize: 10),
           ),
           decimalPlaces: 0,
           minimum: 0,
@@ -61,7 +61,7 @@ class OTGraphWidget extends StatelessWidget {
         primaryYAxis: NumericAxis(
           title: AxisTitle(
             text: 'SPO2',
-            textStyle: TextStyle(color: Theme.of(context).textTheme.bodyText1!.color, fontSize: 10),
+            textStyle: TextStyle(color: Theme.of(context).textTheme.bodyLarge!.color, fontSize: 10),
           ),
           minimum: 80,
           axisLine: AxisLine(

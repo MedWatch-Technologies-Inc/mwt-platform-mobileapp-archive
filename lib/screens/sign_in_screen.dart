@@ -201,7 +201,7 @@ class _SignInScreenState extends State<SignInScreen> {
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
         systemNavigationBarColor:
-            isDarkMode(context) ? Theme.of(context).backgroundColor : Colors.grey[300],
+            isDarkMode(context) ? Theme.of(context).colorScheme.background : Colors.grey[300],
         systemNavigationBarIconBrightness:
             Theme.of(context).brightness == Brightness.light ? Brightness.dark : Brightness.light));
     stringLocalization = StringLocalization.of(context);

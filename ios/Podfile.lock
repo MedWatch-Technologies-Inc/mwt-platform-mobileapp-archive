@@ -1246,7 +1246,7 @@ SPEC CHECKSUMS:
   FirebaseInstallations: 390ea1d10a4d02b20c965cbfd527ee9b3b412acb
   FirebaseMessaging: 0c0ae1eb722ef0c07f7801e5ded8dccd1357d6d4
   FirebaseSessions: 80c2bbdd28166267b3d132debe5f7531efdb00bc
-  Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
+  Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
   flutter_blue_plus: 4837da7d00cf5d441fdd6635b3a57f936778ea96
   flutter_downloader: b7301ae057deadd4b1650dc7c05375f10ff12c39
   flutter_full_pdf_viewer: 1b65139fc3236cde300ba6bea2a72669cb07f2e6
@@ -1271,7 +1271,7 @@ SPEC CHECKSUMS:
   image_downloader: 73e190d6c9f286f2649554051348d9cb319cd4b3
   image_gallery_saver: 259eab68fb271cfd57d599904f7acdc7832e7ef2
   image_picker_ios: 99dfe1854b4fa34d0364e74a78448a0151025425
-  iOSDFULibrary: 5d41d0ac69418d63755195db5f46e99588ae7d48
+  iOSDFULibrary: 88e6454ad3bf405546124894523f5cb139718dd5
   leveldb-library: e74c27d8fbd22854db7cb467968a0b8aa1db7126
   location: 3a2eed4dd2fab25e7b7baf2a9efefe82b512d740
   MJExtension: 21c5f6f8c4d5d8844b7ae8fbae08fed0b501f961
@@ -1308,4 +1308,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 065b2e0956c9ba5c7c87d18a424ea0636e9a9510
 
-COCOAPODS: 1.15.2
+COCOAPODS: 1.16.2

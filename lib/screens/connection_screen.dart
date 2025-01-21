@@ -53,7 +53,7 @@ class ConnectionScreen extends StatefulWidget {
 }
 
 class ConnectionScreenState extends State<ConnectionScreen>
-    with ScanDeviceListener, WeightScaleListener {
+    implements ScanDeviceListener, WeightScaleListener {
   bool? showHiddenDevice;
 
   /// Added by: chandresh

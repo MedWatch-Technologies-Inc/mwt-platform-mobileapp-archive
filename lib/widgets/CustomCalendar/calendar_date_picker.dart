@@ -1164,7 +1164,7 @@ class _DayPickerState extends State<_DayPicker> {
       fontSize: 12,
       fontWeight: FontWeight.bold,
     );
-    final TextStyle? dayStyle = textTheme.caption;
+    final TextStyle? dayStyle = textTheme.bodySmall;
     final Color enabledDayColor = colorScheme.onSurface.withOpacity(0.87);
     final Color disabledDayColor = colorScheme.onSurface.withOpacity(0.38);
     final Color selectedDayColor = colorScheme.onPrimary;

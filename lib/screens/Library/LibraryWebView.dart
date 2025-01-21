@@ -2,7 +2,7 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 import 'dart:typed_data';
-import 'package:flutter_full_pdf_viewer/flutter_full_pdf_viewer.dart';
+// import 'package:flutter_full_pdf_viewer/flutter_full_pdf_viewer.dart';
 import 'package:health_gauge/utils/constants.dart';
 // import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
 import 'package:health_gauge/value/app_color.dart';
@@ -16,12 +16,12 @@ import 'package:health_gauge/value/string_localization_support/string_localizati
 import 'package:webview_flutter/webview_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:photo_view/photo_view.dart';
-import 'package:advance_pdf_viewer/advance_pdf_viewer.dart';
+import 'package:advance_pdf_viewer2/advance_pdf_viewer.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:flutter_downloader/flutter_downloader.dart';
 
 import 'package:flutter/foundation.dart';
-import 'package:flutter_full_pdf_viewer/full_pdf_viewer_scaffold.dart';
+// import 'package:flutter_full_pdf_viewer/full_pdf_viewer_scaffold.dart';
 
 class LibraryWebView extends StatefulWidget {
   final String? title;

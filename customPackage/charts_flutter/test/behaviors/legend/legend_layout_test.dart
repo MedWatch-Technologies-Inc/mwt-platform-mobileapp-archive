@@ -16,6 +16,7 @@
 import 'package:charts_flutter/src/behaviors/legend/legend_layout.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:matcher/expect.dart' as exp;
 
 // Can't use Mockito annotations with BuildContext yet? Fake it.
 class FakeBuildContext extends Fake implements BuildContext {}
@@ -57,16 +58,16 @@ void main() {
       final Table layout = builder.build(context, widgets) as Table;
       expect(layout.children.length, 4);
 
-      expect(layout.children[0].children![0], equals(widgets[0]));
-      expect(layout.children[0].children![1], equals(widgets[1]));
+      expect(layout.children[0].children[0], exp.equals(widgets[0]));
+      expect(layout.children[0].children![1], exp.equals(widgets[1]));
 
-      expect(layout.children[1].children![0], equals(widgets[2]));
-      expect(layout.children[1].children![1], equals(widgets[3]));
+      expect(layout.children[1].children![0], exp.equals(widgets[2]));
+      expect(layout.children[1].children![1], exp.equals(widgets[3]));
 
-      expect(layout.children[2].children![0], equals(widgets[4]));
-      expect(layout.children[2].children![1], equals(widgets[5]));
+      expect(layout.children[2].children![0], exp.equals(widgets[4]));
+      expect(layout.children[2].children![1], exp.equals(widgets[5]));
 
-      expect(layout.children[3].children![0], equals(widgets[6]));
+      expect(layout.children[3].children![0], exp.equals(widgets[6]));
     });
 
     test('builds vertically', () {
@@ -100,16 +101,16 @@ void main() {
       final Table layout = builder.build(context, widgets) as Table;
       expect(layout.children.length, 2);
 
-      expect(layout.children[0].children![0], equals(widgets[0]));
-      expect(layout.children[1].children![0], equals(widgets[1]));
+      expect(layout.children[0].children![0], exp.equals(widgets[0]));
+      expect(layout.children[1].children![0], exp.equals(widgets[1]));
 
-      expect(layout.children[0].children![1], equals(widgets[2]));
-      expect(layout.children[1].children![1], equals(widgets[3]));
+      expect(layout.children[0].children![1], exp.equals(widgets[2]));
+      expect(layout.children[1].children![1], exp.equals(widgets[3]));
 
-      expect(layout.children[0].children![2], equals(widgets[4]));
-      expect(layout.children[1].children![2], equals(widgets[5]));
+      expect(layout.children[0].children![2], exp.equals(widgets[4]));
+      expect(layout.children[1].children![2], exp.equals(widgets[5]));
 
-      expect(layout.children[0].children![3], equals(widgets[6]));
+      expect(layout.children[0].children![3], exp.equals(widgets[6]));
     });
   });
 }

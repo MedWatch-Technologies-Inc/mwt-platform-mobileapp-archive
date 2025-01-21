@@ -5,6 +5,7 @@
 import FlutterMacOS
 import Foundation
 
+import advance_pdf_viewer2
 import cloud_firestore
 import connectivity_plus
 import emoji_picker_flutter
@@ -32,6 +33,7 @@ import url_launcher_macos
 import wakelock_macos
 
 func RegisterGeneratedPlugins(registry: FlutterPluginRegistry) {
+  FlutterPluginPdfViewerPlugin.register(with: registry.registrar(forPlugin: "FlutterPluginPdfViewerPlugin"))
   FLTFirebaseFirestorePlugin.register(with: registry.registrar(forPlugin: "FLTFirebaseFirestorePlugin"))
   ConnectivityPlugin.register(with: registry.registrar(forPlugin: "ConnectivityPlugin"))
   EmojiPickerFlutterPlugin.register(with: registry.registrar(forPlugin: "EmojiPickerFlutterPlugin"))

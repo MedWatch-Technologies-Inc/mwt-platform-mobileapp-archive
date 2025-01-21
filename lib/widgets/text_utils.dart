@@ -18,7 +18,7 @@ class CaptionText extends StatelessWidget {
       softWrap: true,
       textAlign: align,
       style: style(context)
-          .copyWith(fontSize: 8, color: color ?? Theme.of(context).textTheme.caption!.color),
+          .copyWith(fontSize: 8, color: color ?? Theme.of(context).textTheme.bodySmall!.color),
       maxLines: maxLine,
       minFontSize: 6,
     );
@@ -26,9 +26,9 @@ class CaptionText extends StatelessWidget {
 
   TextStyle style(BuildContext context) {
     if (color != null) {
-      return Theme.of(context).textTheme.caption!.copyWith(color: this.color);
+      return Theme.of(context).textTheme.bodySmall!.copyWith(color: this.color);
     } else {
-      return Theme.of(context).textTheme.caption!;
+      return Theme.of(context).textTheme.bodySmall!;
     }
   }
 }
@@ -49,7 +49,7 @@ class SmallText extends StatelessWidget {
       softWrap: true,
       textAlign: align,
       overflow: TextOverflow.ellipsis,
-      style: TextStyle(fontSize: 12.0, color: color ?? Theme.of(context).textTheme.caption!.color),
+      style: TextStyle(fontSize: 12.0, color: color ?? Theme.of(context).textTheme.bodySmall!.color),
       maxLines: maxLine,
       minFontSize: 10,
     );
@@ -88,7 +88,7 @@ class Body1AutoText extends StatelessWidget {
       textAlign: align,
       style: TextStyle(
         fontSize: fontSize ?? 16,
-        color: color ?? Theme.of(context).textTheme.bodyText1!.color,
+        color: color ?? Theme.of(context).textTheme.bodyLarge!.color,
         fontWeight: fontWeight ?? FontWeight.normal,
         decoration: decoration ?? TextDecoration.none,
       ),
@@ -99,9 +99,9 @@ class Body1AutoText extends StatelessWidget {
 
   TextStyle style(BuildContext context) {
     if (color != null) {
-      return Theme.of(context).textTheme.bodyText1!.copyWith(color: this.color);
+      return Theme.of(context).textTheme.bodyLarge!.copyWith(color: this.color);
     } else {
-      return Theme.of(context).textTheme.bodyText1!;
+      return Theme.of(context).textTheme.bodyLarge!;
     }
   }
 }
@@ -136,7 +136,7 @@ class Body1Text extends StatelessWidget {
       textAlign: align,
       style: TextStyle(
         fontSize: fontSize ?? 16.sp,
-        color: color ?? Theme.of(context).textTheme.bodyText1!.color,
+        color: color ?? Theme.of(context).textTheme.bodyLarge!.color,
         fontWeight: fontWeight ?? FontWeight.normal,
       ),
       overflow: textOverflow,
@@ -147,9 +147,9 @@ class Body1Text extends StatelessWidget {
 
   TextStyle style(BuildContext context) {
     if (color != null) {
-      return Theme.of(context).textTheme.bodyText1!.copyWith(color: this.color);
+      return Theme.of(context).textTheme.bodyLarge!.copyWith(color: this.color);
     } else {
-      return Theme.of(context).textTheme.bodyText1!;
+      return Theme.of(context).textTheme.bodyLarge!;
     }
   }
 }
@@ -173,7 +173,7 @@ class Body2Text extends StatelessWidget {
       textAlign: align,
       style: TextStyle(
         fontSize: fontSize ?? 14.sp,
-        color: color ?? Theme.of(context).textTheme.bodyText2!.color,
+        color: color ?? Theme.of(context).textTheme.bodyMedium!.color,
         fontWeight: fontWeight ?? FontWeight.w500,
       ),
       // style: TextStyle(fontSize: MediaQuery.of(context).size.width * 0.045, color: color, fontWeight: FontWeight.w500),
@@ -184,9 +184,9 @@ class Body2Text extends StatelessWidget {
 
   TextStyle style(BuildContext context) {
     if (color != null) {
-      return Theme.of(context).textTheme.bodyText1!.copyWith(color: this.color);
+      return Theme.of(context).textTheme.bodyLarge!.copyWith(color: this.color);
     } else {
-      return Theme.of(context).textTheme.bodyText1!;
+      return Theme.of(context).textTheme.bodyLarge!;
     }
   }
 }
@@ -208,7 +208,7 @@ class SubTitleText extends StatelessWidget {
       textAlign: align,
       style: style(context).copyWith(
         fontSize: 16,
-        color: color ?? Theme.of(context).textTheme.subtitle2!.color,
+        color: color ?? Theme.of(context).textTheme.titleSmall!.color,
         fontWeight: fontWeight,
       ),
       maxLines: maxLine,
@@ -218,9 +218,9 @@ class SubTitleText extends StatelessWidget {
 
   TextStyle style(BuildContext context) {
     if (color != null) {
-      return Theme.of(context).textTheme.caption!.copyWith(color: this.color);
+      return Theme.of(context).textTheme.bodySmall!.copyWith(color: this.color);
     } else {
-      return Theme.of(context).textTheme.caption!;
+      return Theme.of(context).textTheme.bodySmall!;
     }
   }
 }
@@ -246,7 +246,7 @@ class TitleText extends StatelessWidget {
           fontSize: fontSize ?? 18.0,
           fontStyle: FontStyle.normal,
           fontWeight: fontWeight ?? FontWeight.w400,
-          color: color ?? Theme.of(context).textTheme.headline5!.color),
+          color: color ?? Theme.of(context).textTheme.headlineSmall!.color),
       maxLines: maxLine ?? 1,
       minFontSize: 8,
       overflow: TextOverflow.ellipsis,
@@ -255,9 +255,9 @@ class TitleText extends StatelessWidget {
 
   TextStyle style(BuildContext context) {
     if (color != null) {
-      return Theme.of(context).textTheme.headline5!.copyWith(color: this.color);
+      return Theme.of(context).textTheme.headlineSmall!.copyWith(color: this.color);
     } else {
-      return Theme.of(context).textTheme.headline5!;
+      return Theme.of(context).textTheme.headlineSmall!;
     }
   }
 }
@@ -279,7 +279,7 @@ class SubHeadText extends StatelessWidget {
       overflow: TextOverflow.ellipsis,
       textAlign: align,
       style:
-          TextStyle(fontSize: 20.0, color: color ?? Theme.of(context).textTheme.subtitle2!.color),
+          TextStyle(fontSize: 20.0, color: color ?? Theme.of(context).textTheme.titleSmall!.color),
       maxLines: maxLine,
     );
   }
@@ -301,7 +301,7 @@ class HeadlineText extends StatelessWidget {
       text,
       textAlign: align,
       style: style(context).copyWith(
-          fontSize: fontSize ?? 22, color: color ?? Theme.of(context).textTheme.headline5!.color),
+          fontSize: fontSize ?? 22, color: color ?? Theme.of(context).textTheme.headlineSmall!.color),
       maxLines: maxLine,
       minFontSize: 8,
     );
@@ -309,9 +309,9 @@ class HeadlineText extends StatelessWidget {
 
   TextStyle style(BuildContext context) {
     if (color != null) {
-      return Theme.of(context).textTheme.headline1!.copyWith(color: this.color);
+      return Theme.of(context).textTheme.displayLarge!.copyWith(color: this.color);
     } else {
-      return Theme.of(context).textTheme.headline1!;
+      return Theme.of(context).textTheme.displayLarge!;
     }
   }
 }
@@ -334,7 +334,7 @@ class Display1Text extends StatelessWidget {
       style: style(context).copyWith(
           fontSize: fontSize ?? 24,
           fontWeight: FontWeight.bold,
-          color: color ?? Theme.of(context).textTheme.headline5!.color),
+          color: color ?? Theme.of(context).textTheme.headlineSmall!.color),
       maxLines: maxLine ?? 1,
       minFontSize: 15,
     );
@@ -342,9 +342,9 @@ class Display1Text extends StatelessWidget {
 
   TextStyle style(BuildContext context) {
     if (color != null) {
-      return Theme.of(context).textTheme.headline1!.copyWith(color: this.color);
+      return Theme.of(context).textTheme.displayLarge!.copyWith(color: this.color);
     } else {
-      return Theme.of(context).textTheme.headline1!;
+      return Theme.of(context).textTheme.displayLarge!;
     }
   }
 }
@@ -371,7 +371,7 @@ class Display2Text extends StatelessWidget {
       style: style(context).copyWith(
           fontSize: fontSize ?? 34,
           fontWeight: fontWeight ?? FontWeight.bold,
-          color: color ?? Theme.of(context).textTheme.headline5!.color),
+          color: color ?? Theme.of(context).textTheme.headlineSmall!.color),
       maxLines: maxLine,
       minFontSize: 26,
     );
@@ -379,9 +379,9 @@ class Display2Text extends StatelessWidget {
 
   TextStyle style(BuildContext context) {
     if (color != null) {
-      return Theme.of(context).textTheme.headline1!.copyWith(color: this.color);
+      return Theme.of(context).textTheme.displayLarge!.copyWith(color: this.color);
     } else {
-      return Theme.of(context).textTheme.headline1!;
+      return Theme.of(context).textTheme.displayLarge!;
     }
   }
 }

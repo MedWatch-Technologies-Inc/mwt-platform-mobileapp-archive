@@ -18,6 +18,7 @@ import 'package:charts_flutter/src/text_element.dart';
 import 'package:flutter/material.dart' show BuildContext;
 import 'package:flutter/widgets.dart' show InheritedWidget;
 import 'package:flutter_test/flutter_test.dart';
+import 'package:matcher/expect.dart' as exp;
 
 // Can't use Mockito annotations with BuildContext yet? Fake it.
 class FakeBuildContext extends Fake implements BuildContext {
@@ -47,7 +48,7 @@ void main() {
     final textElement =
         graphicsFactory.createTextElement('test') as TextElement;
 
-    expect(textElement.text, equals('test'));
-    expect(textElement.textScaleFactor, equals(3.0));
+    expect(textElement.text, exp.equals('test'));
+    expect(textElement.textScaleFactor, exp.equals(3.0));
   });
 }
